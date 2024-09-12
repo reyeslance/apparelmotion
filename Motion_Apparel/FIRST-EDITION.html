@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirts - Motion Apparel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        header h1 img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: #111;
+            text-align: left;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li span {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav ul li span:hover {
+            color: #ddd;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            white-space: nowrap;
+            pointer-events: auto;
+        }
+
+        nav ul li:hover ul,
+        nav ul li ul:hover {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        nav ul li ul li a {
+            color: #fff;
+            font-size: 1em;
+            font-weight: 400;
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background: #555;
+        }
+
+        nav ul li ul li a img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li ul li a:hover img {
+            transform: scale(1.05);
+        }
+
+        .main-heading {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin: 40px 0;
+            color: #222;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .collection-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .collection-item img.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .collection-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .return-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .return-home:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <span>Collections</span>
+                    <ul>
+                        <li><a href="Classic.html">Classic</a></li>
+                        <li><a href="Came-into-motion.html">Came Into Motion</a></li>
+                        <li><a href="FIRST-EDITION.html">First Edition</a></li>
+                        <li><a href="V1.html">V1</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Shop By</span>
+                    <ul>
+                        <li><a href="T-Shirts.html"><img src="S-S1.jpg" alt="Category 1"></a></li>
+                        <li><a href="Hoodies.html"><img src="1.2.jpg" alt="Category 2"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Brand</span>
+                    <ul>
+                        <li><a href="T-Shirts_Chart.html">T-Shirts Size</a></li>
+                        <li><a href="Hoodies_Chart.html">Hoodies Size</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h1>
+            <a href="D:\MOTION WEBSITE\motionn\index.html">
+              <img src="motion.jpg" alt="header">
+            </a>
+          </h1> 
+    </header>
+
+    <div class="container">
+        <h1 class="main-heading"><b>First Edition</b></h1>
+
+        <div class="grid-container">
+            <div class="collection-item" onclick="location.href='S-S2.html'">
+                <img src="S-S2.jpg" alt="T-Shirt Sample 2" class="active">
+                <img src="S2.1.jpg" alt="T-Shirt Sample 2.1">
+                <img src="S2.2.jpg" alt="T-Shirt Sample 2.2">
+            </div>
+            <div class="collection-item" onclick="location.href='S-S3.html'">
+                <img src="S-S3.jpg" alt="T-Shirt Sample 3" class="active">
+                <img src="S3.1.jpg" alt="T-Shirt Sample 3.1">
+                <img src="S3.2.jpg" alt="T-Shirt Sample 3.2">
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Return to Homepage Button -->
+            <a href="D:\MOTION WEBSITE\motionn\index.html" class="return-home">Return to Homepage</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 motion. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for starting loop on hover
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.collection-item');
+
+            items.forEach(item => {
+                const images = item.querySelectorAll('img');
+                let index = 0;
+                let interval;
+
+                item.addEventListener('mouseover', function() {
+                    if (!interval) {
+                        interval = setInterval(() => {
+                            images[index].classList.remove('active');
+                            index = (index + 1) % images.length;
+                            images[index].classList.add('active');
+                        }, 2000); // Change image every 2 seconds
+                    }
+                });
+
+                item.addEventListener('mouseout', function() {
+                    clearInterval(interval);
+                    interval = null;
+                    // Reset to the first image when the cursor leaves the item
+                    images.forEach(img => img.classList.remove('active'));
+                    images[0].classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

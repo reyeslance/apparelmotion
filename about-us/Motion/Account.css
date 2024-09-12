@@ -1,0 +1,180 @@
+
+
+#sect1 {
+    background-image: url('images/motion-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(0,0,0);
+    color: white;
+}
+/* General styles for the navigation bar */
+.navbar {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center align content horizontally */
+    top: 20px;
+  }
+  
+  /* Container styling */
+  .container {
+    display: flex;
+    align-items: center; /* Center content vertically within the container */
+    justify-content: center; /* Center content horizontally within the container */
+    width: 100%; /* Ensure the container spans full width */
+    padding-left: 0; /* Remove default padding */
+    padding-right: 0; /* Remove default padding */
+  }
+  
+  /* Navbar brand styling */
+  .navbar-brand {
+    color: white;
+    font-size: 20px;
+    text-decoration: none; /* Remove underline from links */
+    padding-top: 1rem; /* Adjusts the vertical alignment */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .navbar-brand {
+      font-size: 18px; /* Adjust font size for smaller screens */
+      padding-top: 0.5rem; /* Adjust vertical alignment for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 16px; /* Further adjust font size for extra small screens */
+      padding-top: 0.5rem; /* Adjust vertical alignment for smaller screens */
+    }
+  }
+  
+
+.title {
+	flex-grow: 1;
+	font-size: 24px;
+	font-weight: bold;
+  margin-left: 30%;
+}
+
+.title button {
+    background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.sub-header {
+	text-align: center;
+	padding: 10px;
+	background-color: rgba(106, 106, 106, 0.8);
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	font-weight: normal;
+}
+
+input {
+    outline: 0;
+    border: 0;
+    background: transparent;
+    margin-left: 10px;
+}
+
+h1 {
+    color: black;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.white-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    max-width: 490px;
+    width: 80%;
+    height: 490px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-box {
+    display: flex;
+    width: 400px;
+    border-radius: 0.5rem;
+    background-color: rgba(128,128,128,0.25);
+    padding: 0.75rem 1rem;
+    margin: 10px auto;
+    height: 27px;
+    width: 70%;
+}
+
+.input-box > svg {
+    margin-top: none;
+}
+
+.enter button {
+    background: none;
+	border: none;
+    color: #000000b5;
+    font-size: 16px;
+    margin-top: 1rem;
+    width: 90;
+}
+
+#form-box > p {
+    margin-top: 1rem;
+}
+
+#form-box > p > a {
+    text-decoration-line: underline;
+}
+
+#eye-toggle {
+    display: flex;
+}
+
+svg#eye-icon {
+    display: none;
+}
+
+.footer {
+	background-color: rgba(0,0,0,0);
+	padding: 20px;
+	text-align: center;
+}
+
+.footer-icons a {
+	margin: 0 10px;
+	display: inline-block;
+}
+
+.footer-icons img {
+	width: 20px;
+	height: 20px;
+	opacity: 0.8;
+	transition: opacity 0.3s ease;
+}
+
+.footer-icons img:hover {
+	opacity: 1;
+}
